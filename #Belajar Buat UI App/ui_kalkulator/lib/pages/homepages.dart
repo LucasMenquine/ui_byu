@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_kalkulator/pages/calculator.dart';
+import 'package:ui_kalkulator/pages/pilihan_calculator_keuangan.dart';
 import 'package:ui_kalkulator/pages/pilihan_calculcator_general.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -67,8 +68,8 @@ class HomePage extends State<MyHomePage> {
                     Center(
                       child: MyPilihanCalculatorGeneral(),
                     ),
-                    const Center(
-                      child: Text("Bagian 3"),
+                    Center(
+                      child: MyPilihanCalculatorKeuangan(),
                     ),
                   ],
                 ),
