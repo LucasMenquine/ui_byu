@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class UplanPage extends StatefulWidget {
@@ -15,7 +14,7 @@ class Uplan extends State<StatefulWidget> {
         Card(
           elevation: 5,
           child: SizedBox(
-            height: 150,
+            height: 155,
             width: double.infinity,
             child: Padding(
               padding: const EdgeInsets.all(15),
@@ -44,20 +43,143 @@ class Uplan extends State<StatefulWidget> {
                   const Divider(),
                   Row(
                     children: [
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: () {},
+                          child: const SizedBox(
+                            child: Column(
+                              children: [
+                                Icon(
+                                  Icons.five_g,
+                                  color: Colors.blue,
+                                ),
+                                Text(
+                                  "Beli Data",
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      const Expanded(
+                        child: SizedBox(
+                          height: 50,
+                          child: VerticalDivider(),
+                        ),
+                      ),
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: () {},
+                          child: const SizedBox(
+                            child: Column(
+                              children: [
+                                Icon(
+                                  Icons.five_g,
+                                  color: Colors.blue,
+                                ),
+                                Text(
+                                  "Beli Data",
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      const Expanded(
+                        child: SizedBox(
+                          height: 50,
+                          child: VerticalDivider(),
+                        ),
+                      ),
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: () {},
+                          child: const SizedBox(
+                            child: Column(
+                              children: [
+                                Icon(
+                                  Icons.five_g,
+                                  color: Colors.blue,
+                                ),
+                                Text(
+                                  "Beli Data",
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                    ],
+                  ),
+                  const Divider(),
+                  Row(
+                    children: [
                       GestureDetector(
                         onTap: () {},
                         child: const SizedBox(
-                          child: Column(
+                          child: Row(
                             children: [
                               Icon(
-                                Icons.five_g,
+                                FontAwesomeIcons.wallet,
                                 color: Colors.blue,
+                                size: 12,
+                              ),
+                              SizedBox(
+                                width: 10,
                               ),
                               Text(
-                                "Beli Data",
+                                "Langganan Kuota",
                                 style: TextStyle(
-                                  fontSize: 13,
                                   fontWeight: FontWeight.w300,
+                                  fontSize: 13,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const Expanded(
+                        child: SizedBox(
+                          height: 20,
+                          child: VerticalDivider(),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: const SizedBox(
+                          child: Row(
+                            children: [
+                              Icon(
+                                FontAwesomeIcons.wallet,
+                                color: Colors.blue,
+                                size: 12,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                "Tuker Voucher Data",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 13,
                                 ),
                               ),
                             ],
@@ -74,11 +196,98 @@ class Uplan extends State<StatefulWidget> {
         const SizedBox(
           height: 20,
         ),
-        const Card(
+        Card(
           elevation: 5,
           child: SizedBox(
             height: 230,
             width: double.infinity,
+            child: Padding(
+              padding: const EdgeInsets.all(15),
+              child: Column(
+                children: [
+                  const Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          "Rincian pemakaian",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        "Lihat Detail",
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w300,
+                        ),
+                      ),
+                      Icon(Icons.arrow_right_alt),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    children: [
+                      const Icon(
+                        FontAwesomeIcons.globe,
+                        color: Colors.blue,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            color: Colors.red,
+                            child: const Row(
+                              children: [
+                                Text(
+                                  "Sisa Total Data",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w300,
+                                    fontSize: 13,
+                                  ),
+                                ),
+                                // SizedBox(
+                                //   width: 145,
+                                // ),
+                                Text(
+                                  "3.91 GB",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          SliderTheme(
+                            data: SliderThemeData(
+                              thumbShape: SliderComponentShape.noThumb,
+                              overlayShape: SliderComponentShape.noThumb,
+                            ),
+                            child: Slider(
+                              value: 70,
+                              min: 0,
+                              max: 100,
+                              activeColor: Colors.blue,
+                              inactiveColor: Colors.black12,
+                              onChanged: (value) {},
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
         const Padding(
@@ -99,12 +308,15 @@ class Uplan extends State<StatefulWidget> {
               ),
               Text(
                 "Lihat Semua",
-                style: TextStyle(fontSize: 13),
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w300,
+                ),
               ),
               Icon(Icons.arrow_right_alt),
             ],
           ),
-        )
+        ),
       ],
     );
   }

@@ -91,8 +91,10 @@ class MainApp extends StatelessWidget {
                               alignment: Alignment.topRight,
                               child: Row(
                                 children: [
-                                  GestureDetector(
-                                    onTap: () {},
+                                   GestureDetector(
+                                    onTap: () {
+                                      // ansdiuh
+                                    },
                                     child: const Card(
                                       color: Colors.transparent,
                                       child: SizedBox(
