@@ -1,0 +1,12 @@
+com.example.ui_kalkulator.app-debug-0 C:\Flutter Developers\#Belajar Buat UI App\ui_kalkulator\android\app\src\debug\res
+com.example.ui_kalkulator.app-main-1 C:\Flutter Developers\#Belajar Buat UI App\ui_kalkulator\android\app\src\main\res
+com.example.ui_kalkulator.app-pngs-2 C:\Flutter Developers\#Belajar Buat UI App\ui_kalkulator\build\app\generated\res\pngs\debug
+com.example.ui_kalkulator.app-resValues-3 C:\Flutter Developers\#Belajar Buat UI App\ui_kalkulator\build\app\generated\res\resValues\debug
+com.example.ui_kalkulator.app-rs-4 C:\Flutter Developers\#Belajar Buat UI App\ui_kalkulator\build\app\generated\res\rs\debug
+com.example.ui_kalkulator.app-mergeDebugResources-5 C:\Flutter Developers\#Belajar Buat UI App\ui_kalkulator\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.ui_kalkulator.app-mergeDebugResources-6 C:\Flutter Developers\#Belajar Buat UI App\ui_kalkulator\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.ui_kalkulator.app-merged_res-7 C:\Flutter Developers\#Belajar Buat UI App\ui_kalkulator\build\app\intermediates\merged_res\debug
+com.example.ui_kalkulator.app-core-1.6.0-8 C:\Users\lukas\.gradle\caches\transforms-3\284a410c767ad6c7a2b0ffc8d8d85981\transformed\core-1.6.0\res
+com.example.ui_kalkulator.app-jetified-window-java-1.0.0-beta04-9 C:\Users\lukas\.gradle\caches\transforms-3\2a215381204751055df81b6269e717b7\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.ui_kalkulator.app-jetified-annotation-experimental-1.1.0-10 C:\Users\lukas\.gradle\caches\transforms-3\3d2f03fc996c2e0aa3dee5cfa3002cd1\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.ui_kalkulator.app-jetified-window-1.0.0-beta04-11 C:\Users\lukas\.gradle\caches\transforms-3\f302e75fb7efd781bcf1a29281c188da\transformed\jetified-window-1.0.0-beta04\res

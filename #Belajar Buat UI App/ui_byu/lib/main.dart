@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ui_byu/pages/uplan_page.dart';
 
@@ -91,7 +92,7 @@ class MainApp extends StatelessWidget {
                               alignment: Alignment.topRight,
                               child: Row(
                                 children: [
-                                   GestureDetector(
+                                  GestureDetector(
                                     onTap: () {
                                       // ansdiuh
                                     },
@@ -169,6 +170,65 @@ class MainApp extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+          ),
+          floatingActionButton: SizedBox(
+            height: 67,
+            width: 75,
+            child: FloatingActionButton(
+              highlightElevation: 0,
+              splashColor: Colors.transparent,
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              onPressed: () {},
+              child: Stack(
+                children: [
+                  const Align(
+                    alignment: Alignment.bottomCenter,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.red,
+                      radius: 30,
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(right: 5),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Icon(
+                        FontAwesomeIcons.handDots,
+                        color: Color.fromARGB(255, 255, 170, 164),
+                        size: 55,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 0),
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: Container(
+                        padding: const EdgeInsets.all(4),
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(5),
+                          ),
+                          color: Colors.blue,
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 3),
+                          child: Text(
+                            "HELP",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),
