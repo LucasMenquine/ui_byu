@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ui_byu/pages/updates_page.dart';
 import 'package:ui_byu/pages/uplan_page.dart';
+import 'package:ui_byu/pages/utainment_page.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -29,34 +30,34 @@ class MainApp extends StatelessWidget {
                   width: double.infinity,
                   color: Colors.orange,
                 ),
-                Column(
-                  children: [
-                    const SizedBox(
-                      height: 180,
-                      width: double.infinity,
-                    ),
-                    Expanded(
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(10),
-                            topRight: Radius.circular(10),
-                          ),
-                          color: Colors.white,
-                        ),
-                        height: double.infinity,
-                        width: double.infinity,
-                      ),
-                    ),
-                  ],
-                ),
+                // Column(
+                //   children: [
+                //     const SizedBox(
+                //       height: 180,
+                //       width: double.infinity,
+                //     ),
+                //     Expanded(
+                //       child: Container(
+                //         decoration: const BoxDecoration(
+                //           borderRadius: BorderRadius.only(
+                //             topLeft: Radius.circular(10),
+                //             topRight: Radius.circular(10),
+                //           ),
+                //           color: Colors.white,
+                //         ),
+                //         height: double.infinity,
+                //         width: double.infinity,
+                //       ),
+                //     ),
+                //   ],
+                // ),
                 SizedBox(
                   width: double.infinity,
-                  child: Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Column(
-                      children: [
-                        Row(
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(15),
+                        child: Row(
                           children: [
                             const Expanded(
                               child: Row(
@@ -136,37 +137,45 @@ class MainApp extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const SizedBox(
-                          height: 20,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const SizedBox(
+                        // width: double.infinity,
+                        child: TabBar(
+                          dividerColor: Colors.transparent,
+                          indicatorColor: Colors.white,
+                          indicatorSize: TabBarIndicatorSize.label,
+                          tabs: [
+                            Text(
+                              "U-Plan",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              "Updates",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              "U-Tainment",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ],
                         ),
-                        const SizedBox(
-                          // width: double.infinity,
-                          child: TabBar(
-                            dividerColor: Colors.transparent,
-                            indicatorColor: Colors.white,
-                            indicatorSize: TabBarIndicatorSize.label,
-                            tabs: [
-                              Text(
-                                "U-Plan",
-                                style: TextStyle(color: Colors.white),
-                              ),
-                              Text(
-                                "Updates",
-                                style: TextStyle(color: Colors.white),
-                              ),
-                              Text(
-                                "U-Tainment",
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ],
-                          ),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Expanded(
+                        child: TabBarView(
+                          children: [
+                            UplanPage(),
+                            UpdatesPage(),
+                            UtainmentPage(),
+                          ],
                         ),
-                        const SizedBox(
-                          height: 30,
-                        ),
-                        UplanPage(),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -226,7 +235,7 @@ class MainApp extends StatelessWidget {
                         ),
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
