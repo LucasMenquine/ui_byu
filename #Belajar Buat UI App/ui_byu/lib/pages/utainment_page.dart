@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+Map<String, List<String>> dataUStore = {
+  "Satu": [
+    "U Original Totebag Indonesian Value Set",
+    "+7 GB | ",
+    "30 Hari",
+    "Rp 299.000",
+    "Rp 174.000",
+  ],
+  "Dua": ["Enamel Pin Indonesian", "+1 GB | ", "1 Hari", "", "Rp 105.500"],
+  "Tiga": ["U Original Coin Pouch", "+1 GB | ", "1 Hari", "", "Rp 53.000"],
+};
+
 class UtainmentPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => Utainment();
@@ -11,6 +23,11 @@ class Utainment extends State<StatefulWidget> {
   Widget build(BuildContext context) {
     // Mencari tinggi layar hp
     double tinggiLayar = MediaQuery.of(context).size.height * 1.4;
+
+    // Data UStore
+    List<String> cardSatu = dataUStore["Satu"]!;
+    List<String> cardDua = dataUStore["Dua"]!;
+    List<String> cardTiga = dataUStore["Tiga"]!;
 
     return Expanded(
       child: SingleChildScrollView(
@@ -35,11 +52,11 @@ class Utainment extends State<StatefulWidget> {
                 ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.all(15),
-              child: Column(
-                children: [
-                  Card(
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 15, left: 15, right: 15),
+                  child: Card(
                     elevation: 5,
                     child: SizedBox(
                       height: 240,
@@ -158,171 +175,311 @@ class Utainment extends State<StatefulWidget> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 15, right: 15, top: 20, bottom: 10),
-                    child: Row(
-                      children: [
-                        const Align(
-                          alignment: Alignment.centerLeft,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      left: 25, right: 15, top: 20, bottom: 10),
+                  child: Row(
+                    children: [
+                      const Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Kumpulan Hiburan Anak by.U",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(3),
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 173, 4, 26),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 2),
                           child: Text(
-                            "Kumpulan Hiburan Ank by.U",
+                            "Bebas Kuota",
                             style: TextStyle(
+                              fontSize: 11,
                               fontWeight: FontWeight.bold,
-                              fontSize: 15,
+                              color: Colors.white,
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        Container(
-                          padding: const EdgeInsets.all(3),
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 173, 4, 26),
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          child: const Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 2),
-                            child: Text(
-                              "Bebas Kuota",
-                              style: TextStyle(
-                                fontSize: 11,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 20, bottom: 10),
-                    child: Row(
-                      // mainAxisAlignment: MainAxisAlignment.center,
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(bottom: 10, left: 15, right: 15),
+                  child: Row(
+                    // mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Card(
+                        elevation: 5,
+                        child: SizedBox(
+                          height: 105,
+                          width: 105,
+                          child: Padding(
+                            padding: EdgeInsets.all(10),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.headphones,
+                                  color: Colors.blue,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  "Play",
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "Musik, Video & Games",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Card(
+                        elevation: 5,
+                        child: SizedBox(
+                          height: 105,
+                          width: 105,
+                          child: Padding(
+                            padding: EdgeInsets.all(10),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.article,
+                                  color: Colors.blue,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  "Discover",
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "Bacaan Artikel & Komik",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Card(
+                        elevation: 5,
+                        child: SizedBox(
+                          height: 105,
+                          width: 105,
+                          child: Padding(
+                            padding: EdgeInsets.all(10),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.group,
+                                  color: Colors.blue,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  "Space",
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "Event dan Komunitas",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const Padding(
+                  padding:
+                      EdgeInsets.only(left: 25, right: 25, top: 10, bottom: 10),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          "uStore",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        "Lihat Semua",
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w300,
+                        ),
+                      ),
+                      Icon(
+                        Icons.arrow_right_alt,
+                        color: Colors.blue,
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: SizedBox(
+                    height: 290,
+                    width: double.infinity,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      padding: const EdgeInsets.only(bottom: 5),
                       children: [
-                        Card(
-                          elevation: 5,
-                          child: SizedBox(
-                            height: 105,
-                            width: 105,
-                            child: Padding(
-                              padding: EdgeInsets.all(10),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Icon(
-                                    Icons.headphones,
-                                    color: Colors.blue,
-                                  ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  Text(
-                                    "Play",
-                                    style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Musik, Video & Games",
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w300,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
+                        uStoreCard(cardSatu),
+                        uStoreCard(cardDua),
+                        uStoreCard(cardTiga),
+                        // uStoreCard(),
+                        // uStoreCard(),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class uStoreCard extends StatefulWidget {
+  final List<String> isiDataUStore;
+
+  @override
+  State<StatefulWidget> createState() => uStore();
+
+  uStoreCard(this.isiDataUStore);
+}
+
+class uStore extends State<uStoreCard> {
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 5,
+      child: SizedBox(
+        width: 160,
+        child: Column(
+          children: [
+            Container(
+              width: 160,
+              height: 130,
+              decoration: const BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(12),
+                  topRight: Radius.circular(12),
+                ),
+              ),
+            ),
+            Expanded(
+              // KENAPA PERLU DI EXPANDED YANG INI?
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Text(
+                        widget.isiDataUStore[0],
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w300,
+                          fontSize: 13,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          widget.isiDataUStore[1],
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 12,
+                            color: Colors.blue,
                           ),
                         ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Card(
-                          elevation: 5,
-                          child: SizedBox(
-                            height: 105,
-                            width: 105,
-                            child: Padding(
-                              padding: EdgeInsets.all(10),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Icon(
-                                    Icons.article,
-                                    color: Colors.blue,
-                                  ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  Text(
-                                    "Discover",
-                                    style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Bacaan Artikel & Komik",
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w300,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Card(
-                          elevation: 5,
-                          child: SizedBox(
-                            height: 105,
-                            width: 105,
-                            child: Padding(
-                              padding: EdgeInsets.all(10),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Icon(
-                                    Icons.group,
-                                    color: Colors.blue,
-                                  ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  Text(
-                                    "Space",
-                                    style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Event dan Komunitas",
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w300,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
+                        Text(
+                          widget.isiDataUStore[2],
+                          style: const TextStyle(
+                            fontSize: 12,
+                            color: Colors.blue,
+                            fontWeight: FontWeight.w300,
                           ),
                         ),
                       ],
                     ),
-                  ),
-                ],
+                    Text(
+                      widget.isiDataUStore[3],
+                      style: const TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w300,
+                        decoration: TextDecoration.lineThrough,
+                      ),
+                    ),
+                    Text(
+                      widget.isiDataUStore[4],
+                      style: const TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
