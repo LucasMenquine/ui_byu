@@ -271,7 +271,7 @@ class Utainment extends State<StatefulWidget> {
                     ),
                     color: Colors.white,
                   ),
-                  height: tinggiLayar * 2.4,
+                  height: tinggiLayar * 2.44,
                   width: double.infinity,
                 ),
               ],
@@ -1616,6 +1616,68 @@ class Utainment extends State<StatefulWidget> {
                     ),
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
+                  child: Card(
+                    child: SizedBox(
+                      height: 160,
+                      width: double.infinity,
+                      child: Stack(
+                        children: [
+                          const Align(
+                            alignment: Alignment.centerRight,
+                            child: Image(
+                              image: NetworkImage(
+                                  "https://img.lovepik.com/free-png/20210928/lovepik-game-shopping-consumption-gold-coins-png-image_401751616_wh1200.png"),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(15),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  "Mau dapet tambahan uCoin?\nTonton video ini yuk!",
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                const Text(
+                                  "uCoin bisa ditukarkan dengan kuota\ntopping dan reward lainnya loh!",
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                SizedBox(
+                                  height: 30,
+                                  width: 120,
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.blue,
+                                    ),
+                                    onPressed: () {},
+                                    child: const Text(
+                                      "Lihat Video",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           ],
